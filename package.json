@@ -1,0 +1,26 @@
+{
+  "name": "nodebb-plugin-threaded-replies",
+  "version": "0.1.0",
+  "description": "A Plugin that allows posts to be threaded",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NodeBB/nodebb-plugin-threaded-replies"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "threaded"
+  ],
+  "author": "Baris Usakli <baris@designcreateplay.com>",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+
+  },
+  "nbbpm": {
+    "compatibility": "^0.6.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "id": "nodebb-plugin-threaded-replies",
+    "name": "Threaded replies plugin",
+    "description": "A Plugin that allows posts to be threaded",
+    "url": "https://github.com/NodeBB/nodebb-plugin-threaded-replies",
+    "library": "./index.js",
+    "staticDirs": {
+
+    },
+    "hooks": [
+        { "hook": "static:app.load", "method": "init"},
+
+        { "hook": "filter:admin.header.build", "method": "admin.menu"}
+    ],
+    "templates": "./public/templates"
+}
