@@ -13,9 +13,11 @@
         { "hook": "filter:admin.header.build", "method": "admin.menu"},
 
         {"hook": "filter:post.save", "method": "onPostSave"},
-        {"hook": "action:post.purge", "method": "onPostPurge"},
+        {"hook": "filter:post.getPosts", "method": "onGetPosts"},
 
-        {"hook": "filter:post.getPosts", "method": "onGetPosts"}
+        {"hook": "action:post.purge", "method": "onPostPurge"},
+        {"hook": "action:post.move", "method": "onPostMove"}
+
     ],
     "templates": "./public/templates"
 }

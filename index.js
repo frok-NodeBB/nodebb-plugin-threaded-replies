@@ -47,8 +47,16 @@ var async = module.parent.require('async'),
 		});
 	};
 
-	plugin.onPostMove = function() {
-		//no hook for this yet :(
+	plugin.onPostMove = function(data) {
+		db.getObjectField('post:' + data.post.pid, 'toPid', function(err, toPid) {
+			if (err) {
+				return winston.error(err.stack);
+			}
+
+			if (parseInt(toPid, 10)) {
+				db.sortedSetRemove('pid:' + toPid + ':replies', pid);
+			}
+		});
 	};
 
 	plugin.onGetPosts = function(data, callback) {
